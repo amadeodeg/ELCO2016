@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<header>
+		<h1>Presentación de datos</h1>
+	</header>
+
+	<div>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">Último Día</a></li>
+					<li><a href="week.html">Última Semana</a></li>
+					<li class="active"><a href="#">Histórico</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="date">
+		Mínima Fecha y hora <br>
+		<input id="minDate" type="date">
+		<input id="minTime" type="time"><br>
+		Máxima Fecha y hora <br>
+		<input id="maxDate" type="date">
+		<input id="maxTime" type="time"><br>
+	</div>
+
+	<div style="position: relative">
+		<form style="width: 15%; height: 100%;" role="form">
+			<div class="form-group">
+				<label for="chkTemp" class="control-label col-md-10">Temperatura</label>
+				<div class="col-md-1">
+					<input name="chkTemp" type="checkbox" id="chkTemp" onclick ="plotuserconf()"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="chkPres" class="control-label col-md-10">Presión</label>
+				<div class="col-md-1">
+					<input name="chkPres" type="checkbox" id="chkPres" onclick ="plotuserconf()"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="chkHumi" class="control-label col-md-10">Humedad</label>
+				<div class="col-md-1">
+					<input name="chkHumi" type="checkbox" id="chkHumi" onclick ="plotuserconf()"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="chkUV" class="control-label col-md-10">UV</label>
+				<div class="col-md-1">
+					<input name="chkUV" type="checkbox" id="chkUV" onclick ="plotuserconf()"/>
+				</div>	
+			</div>
+			<div class="form-group">
+				<label for="chkRain" class="control-label col-md-10">Lluvia</label>
+				<div class="col-md-1">
+					<input name="chkRain" type="checkbox" id="chkRain" onclick ="plotuserconf()"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="chkWiSp" class="control-label col-md-10">Velocidad Viento</label>
+				<div class="col-md-1">
+					<input name="chkWiSp" type="checkbox" id="chkWiSp" onclick ="plotuserconf()"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="chkWiDi" class="control-label col-md-10">Dirección Viento</label>
+				<div class="col-md-1">
+					<input name="chkWiDi" type="checkbox" id="chkWiDi" onclick ="plotuserconf()"/>
+				</div>
+			</div>
+		</form>
+		
+		<div style="width: 70%; height: 100%; left: 25%; top: 0; position: absolute">
+			<div class="graphic">
+				<div id="divTemperature"></div>
+				<div id="divPresure"></div>
+				<div id="divHumidity"></div>
+				<div id="divUV"></div>
+				<div id="divRain"></div>
+				<div id="divWindSpeed"></div>
+				<div id="divWindDirection"></div>
+			</div>
+
+			<footer>
+				ELCO2016
+				<br>María Alvarez Custodio
+				<br>Amadeo de Gracia Herranz
+				<br>Clara Nieto-Taladriz Moreno
+				<br>Paula Palacios Mahave
+				<br>Carlos Santos Rancaño
+			</footer>
+		</div>
+	</div>
+
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.2/nv.d3.css" rel="stylesheet" type="text/css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.2/nv.d3.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+	<script type="text/javascript" src="function.js"></script>
+
+</body>
+
+
+
+</html>
